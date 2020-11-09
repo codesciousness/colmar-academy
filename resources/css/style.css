@@ -1,0 +1,77 @@
+/* Universal Styles */
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #383838;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+}
+
+.button {
+    padding: 0.5rem 5rem;
+    background-color: #383838;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #383838;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.25rem;
+    padding: 0 1.5rem;
+    line-height: 4rem;
+    background-color: lightgray;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header span {
+    color: gray;
+}
+
+.desktop left {
+    display: inline-block;
+}
+
+.desktop img {
+    height: 55px;
+    width: auto;
+}
+
+header .mobile {
+    display: none;
+}
+
