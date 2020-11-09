@@ -42,6 +42,23 @@ a {
     color: #383838;
 }
 
+/* Grid Layout */
+
+#main-grid-container {
+    display: grid;
+    grid-template: repeat(2, 1fr) repeat(3, 1fr) repeat(2, 1fr) repeat(2, 1fr)/ 60% 40%;
+    grid-template-areas:
+        'banner banner'
+        'banner banner'
+        'campus-info campus-info'
+        'campus-info campus-info'
+        'campus-info campus-info'
+        'course-info course-info'
+        'course-info course-info'
+        'thesis-exhibit thesis-exhibit'
+        'thesis-exhibit thesis-exhibit';
+}
+
 /* Header */
 
 header {
@@ -50,7 +67,6 @@ header {
     font-size: 1.25rem;
     padding: 0 1.5rem;
     line-height: 4rem;
-    background-color: lightgray;
 }
 
 header li {
@@ -62,16 +78,28 @@ header span {
     color: gray;
 }
 
-.desktop left {
-    display: inline-block;
-}
-
 .desktop img {
     height: 55px;
     width: auto;
+    vertical-align: middle;
 }
 
 header .mobile {
     display: none;
 }
 
+#banner {
+    grid-area: banner;
+}
+
+#campus-info {
+    grid-area: campus-info;
+}
+
+#course-info {
+    grid-area: course-info;
+}
+
+#thesis-exhibit {
+    grid-area: thesis-exhibit;
+}
