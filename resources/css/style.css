@@ -42,6 +42,16 @@ body {
     width: 80%;
 }
 
+.side-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.side-container:hover {
+    background-color: lightgray;
+}
+
 h1 {
     font-size: 3.125rem;
     font-weight: 800;
@@ -66,7 +76,7 @@ a {
     color: #505050;
 }
 
-#banner, #campus-info, #thesis-exhibit {
+#banner, #campus-info, #course-info, #thesis-container {
     display: grid;
     grid-template-columns: 60% 40%;
 }
@@ -75,10 +85,10 @@ a {
 
 header {
     width: 100%;
-    height: 4rem;
+    height: 4.5rem;
     font-size: 1.25rem;
     padding: 0 1.5rem;
-    line-height: 4rem;
+    line-height: 4.5rem;
 }
 
 header .left {
@@ -140,8 +150,8 @@ header .mobile {
 }
 
 .learning-quote {
-    width: 80%;
     grid-area: learning-quote;
+    width: 81%;
 }
 
 .learning-quote .content h2 {
@@ -158,14 +168,8 @@ header .mobile {
     grid-area: campus-info;
 }
 
-.campus-info .side-container {
-    display: flex;
-    align-items: center;
-    border: 1px solid lightgray;
-}
-
 .campus-info .image-container {
-    max-width: 30%;
+    max-width: 32%;
     margin: 1rem;
 }
 
@@ -188,10 +192,6 @@ header .mobile {
     margin-top: 0.5rem;
 }
 
-.campus-info .side-container.three {
-    background-color: lightgray;
-}
-
 .campus-info .mobile {
     display: none;
 }
@@ -200,34 +200,37 @@ header .mobile {
 
 #course-info {
     display: grid;
-    grid-template: 10% 90% / 100%;
+    grid-template: 10% 90%;
     grid-template-areas:
-        'course-info-header'
-        'course-info-flexbox';
+        'course-info-header course-info-header'
+        'course-info-flexbox course-info-flexbox';
     align-items: center;
     background-color: whitesmoke;
     padding-bottom: 4rem;
-    position: relative;
+    margin: auto;
 }
 
 #course-info h2 {
     grid-area: course-info-header;
     text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 #course-info .course-container {
     grid-area: course-info-flexbox;
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
 #course-info .courses {
-    width: 24%;
+    max-width: 24%;
     margin: 1rem;
     background-color: white;
+}
+
+.courses:hover {
+    background-color: lightskyblue;
 }
 
 #course-info .content {
@@ -252,11 +255,48 @@ header .mobile {
 /* Thesis Exhibit */
 
 #thesis-exhibit {
-    grid-template-rows: 10% 90%;
-    grid-template-areas:
-        'learning-quote campus-info';
     background-color: ghostwhite;
     padding: 2rem 0 2rem 1.5rem;
+}
+
+#thesis-exhibit h2 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+#thesis-container {
+    grid-template-areas:
+        'thesis-video exhibit-container';
+    padding-top: 2rem;
+}
+
+#thesis-video {
+    grid-area: thesis-video;
+    width: 90%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#thesis-exhibit .exhibit-container {
+    grid-area: exhibit-container;
+}
+
+#thesis-exhibit .image-container {
+    width: 32%;
+    margin: 1rem;
+}
+
+.exhibit-container .content {
+    margin-left: 0.5rem;
+}
+
+#thesis-exhibit .mobile {
+    display: none;
 }
 
 /* Footer */
