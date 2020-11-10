@@ -15,6 +15,11 @@ body {
     color: #505050;
 }
 
+main, footer {
+    position: relative;
+    top: 4.5rem;
+}
+
 .left {
     float: left;
 }
@@ -76,18 +81,17 @@ a {
     color: #505050;
 }
 
-#banner, #campus-info, #course-info, #thesis-container {
-    display: grid;
-    grid-template-columns: 60% 40%;
-}
-
 /* Header */
 
 header {
+    position: fixed;
+    z-index: 1;
     width: 100%;
     height: 4.5rem;
+    background-color: white;
     font-size: 1.25rem;
     line-height: 4.5rem;
+    overflow: hidden;
 }
 
 header .left {
@@ -119,24 +123,42 @@ header .mobile {
     display: none;
 }
 
+/*@media only screen and (max-width: 800px) {
+    header .desktop {
+        display: none;
+    }
+    
+    header .mobile {
+        display: block;
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    header li {
+        margin: 0 8%;
+    }
+
+    .mobile img {
+        height: 40px;
+        width: auto;
+        vertical-align: middle;
+}*/
+
 /* Banner */
 
 #banner {
+    display: flex;
+    flex-wrap: wrap;
     background-color: lightgray;
-    grid-template-areas:
-        'banner-image banner-content';
-    align-items: center;
 }
 
 #banner-image {
-    width: 80%;
-    grid-area: banner-image;
-    margin: 2rem 1.5rem;
+    width: 60%;
+    margin: 2rem;
 }
 
 #banner .content {
-    width: 80%;
-    grid-area: banner-content;
+    padding: 4rem 0;
 }
 
 #banner h3 {
@@ -151,15 +173,14 @@ header .mobile {
 /* Campus Information */
 
 #campus-info {
-    grid-template-areas:
-        'learning-quote campus-info';
+    display: flex;
+    flex-wrap: wrap;
     background-color: ghostwhite;
-    padding: 2rem 0 2rem 1.5rem;
 }
 
 .learning-quote {
-    grid-area: learning-quote;
-    width: 81%;
+    width: 50%;
+    margin: 2rem;
 }
 
 .learning-quote .content h2 {
@@ -173,7 +194,9 @@ header .mobile {
 }
 
 .campus-info {
-    grid-area: campus-info;
+    width: 35%;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .campus-info .image-container {
@@ -208,14 +231,13 @@ header .mobile {
 
 #course-info {
     display: grid;
-    grid-template: 10% 90%;
+    grid-template-rows: 1fr 7fr;
     grid-template-areas:
-        'course-info-header course-info-header'
-        'course-info-flexbox course-info-flexbox';
-    align-items: center;
+        'course-info-header'
+        'course-info-flexbox';
+    align-items: start;
     background-color: whitesmoke;
-    padding-bottom: 4rem;
-    margin: auto;
+    padding-bottom: 2rem;
 }
 
 #course-info h2 {
@@ -273,14 +295,13 @@ header .mobile {
 }
 
 #thesis-container {
-    grid-template-areas:
-        'thesis-video exhibit-container';
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 2rem;
 }
 
 #thesis-video {
-    grid-area: thesis-video;
-    width: 90%;
+    width: 60%;
     overflow: hidden;
 }
 
@@ -288,10 +309,6 @@ video {
     width: 100%;
     height: auto;
     display: block;
-}
-
-#thesis-exhibit .exhibit-container {
-    grid-area: exhibit-container;
 }
 
 #thesis-exhibit .image-container {
