@@ -87,13 +87,17 @@ header {
     width: 100%;
     height: 4.5rem;
     font-size: 1.25rem;
-    padding: 0 1.5rem;
     line-height: 4.5rem;
 }
 
 header .left {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
+    margin-left: 1.5rem;
+}
+
+header .right {
+    margin-right: 1.5rem;
 }
 
 header li {
@@ -138,6 +142,10 @@ header .mobile {
 #banner h3 {
     margin-bottom: 2.5rem;
     line-height: 1.5;
+}
+
+#banner a {
+    color: white;
 }
 
 /* Campus Information */
@@ -229,8 +237,8 @@ header .mobile {
     background-color: white;
 }
 
-.courses:hover {
-    background-color: lightskyblue;
+#course-info .courses:hover {
+    background-color: lightgray;
 }
 
 #course-info .content {
@@ -291,6 +299,10 @@ video {
     margin: 1rem;
 }
 
+#thesis-exhibit .content h3 {
+    margin: 2rem 0;
+}
+
 .exhibit-container .content {
     margin-left: 0.5rem;
 }
@@ -300,3 +312,23 @@ video {
 }
 
 /* Footer */
+
+footer {
+    background-color: ghostwhite;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height: 4rem;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-left: 1.5rem;
+}
+
+footer span {
+    margin: 1rem;
+}
+
+footer div {
+    padding-top: 1rem;
+}
