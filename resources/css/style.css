@@ -51,7 +51,6 @@ main, footer {
 
 .button:hover {
     background-color: darkslategray;
-    color: white;
     padding: 1.25rem 0.5rem;
     box-shadow: 5px 5px 20px black
 }
@@ -59,7 +58,6 @@ main, footer {
 .side-container {
     display: flex;
     align-items: center;
-    border: 1px solid lightgray;
     transition: background-color 0.5s ease-in 0.1s;
 }
 
@@ -194,6 +192,33 @@ header .mobile {
     color: white;
 }
 
+@media only screen and (max-width: 1125px) {
+
+    #banner-image {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #banner-image {
+        min-width: 95%;
+    }
+
+    #banner {
+        flex-flow: column;
+    }
+
+    #banner .content {
+        width: 70%;
+        padding: 0 1rem 2rem;
+    }
+
+    .button {
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     
     #banner {
@@ -206,22 +231,9 @@ header .mobile {
     }
 
     #banner .content {
-        width: 100%;
         padding: 2rem 0;
-        margin: auto;
     }
 
-    #banner h1, #banner h3 {
-        margin: 2rem;
-        padding-left: 3rem;
-    }
-
-    .button {
-        margin: auto;
-        margin-bottom: 2rem;
-        background-color: gray;
-        font-size: 1.5rem;
-    }
 }
 
 /* Campus Information */
