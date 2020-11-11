@@ -58,7 +58,7 @@ main, footer {
 }
 
 h1 {
-    font-size: 3.125rem;
+    font-size: 6vmin;
     font-weight: 800;
     margin-bottom: 2rem;
 }
@@ -148,17 +148,18 @@ header .mobile {
 
 #banner {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     background-color: lightgray;
 }
 
 #banner-image {
-    width: 60%;
+    width: 50%;
     margin: 2rem;
 }
 
 #banner .content {
-    padding: 4rem 0;
+    width: 30%;
+    padding: 4rem 1.5rem;
 }
 
 #banner h3 {
@@ -174,7 +175,6 @@ header .mobile {
 
 #campus-info {
     display: flex;
-    flex-wrap: wrap;
     background-color: ghostwhite;
 }
 
@@ -194,7 +194,7 @@ header .mobile {
 }
 
 .campus-info {
-    width: 35%;
+    width: 40%;
     margin-top: 2rem;
     margin-left: 1rem;
 }
@@ -296,12 +296,11 @@ header .mobile {
 
 #thesis-container {
     display: flex;
-    flex-wrap: wrap;
     padding-top: 2rem;
 }
 
 #thesis-video {
-    width: 60%;
+    width: 55%;
     overflow: hidden;
 }
 
@@ -317,7 +316,12 @@ video {
 }
 
 #thesis-exhibit .content h3 {
-    margin: 2rem 0;
+    margin: 1rem 0;
+}
+
+.exhibit-container {
+    width: 45%;
+    margin-left: 2rem;
 }
 
 .exhibit-container .content {
