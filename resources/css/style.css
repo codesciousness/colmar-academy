@@ -200,6 +200,7 @@ header .mobile {
         margin: auto;
         margin-bottom: 2rem;
         background-color: gray;
+        font-size: 1.5rem;
     }
 }
 
@@ -261,16 +262,12 @@ header .mobile {
 
 @media only screen and (max-width: 650px) {
 
-    .campus-info .desktop {
+    .campus-info .desktop, .learning-quote {
         display: none;
     }
 
     .campus-info .mobile {
         display: block;
-    }
-
-    .learning-quote {
-        display: none;
     }
 
     .campus-info {
@@ -285,6 +282,10 @@ header .mobile {
         flex-flow: column;
         align-items: flex-start;
         border: none;
+    }
+
+    #campus-info .side-container:hover {
+        background-color: ghostwhite;
     }
 
     .campus-info .content {
@@ -355,6 +356,32 @@ header .mobile {
     font-size: 1.25rem;
 }
 
+@media only screen and (max-width: 650px) {
+
+    #course-info {
+        grid-template-rows: 1fr 6fr;
+    }
+
+    #course-info img, #course-info p {
+        display: none;
+    }
+
+    #course-info .course-container {
+        flex-flow: column;
+    }
+
+    #course-info .courses {
+        background-color:lightgray;
+        opacity: 0.9;
+        margin: 0.5rem 1.5rem;
+        max-width: 100%;
+    }
+
+    #course-info h3 {
+        font-size: 2rem;
+    }
+}
+
 /* Thesis Exhibit */
 
 #thesis-exhibit {
@@ -405,6 +432,31 @@ video {
     display: none;
 }
 
+@media only screen and (max-width: 650px) {
+
+    #thesis-exhibit .desktop, .exhibit-container, #thesis-container .content {
+        display: none;
+    }
+
+    #thesis-exhibit .mobile {
+        display: block;
+    }
+
+    #thesis-container, #thesis-video {
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    #thesis-exhibit {
+        padding: 0;
+    }
+
+    #thesis-exhibit h2 {
+        margin: 0;
+        padding: 1.5rem;
+    }
+}
+
 /* Footer */
 
 footer {
@@ -425,4 +477,19 @@ footer span {
 
 footer div {
     padding-top: 1rem;
+}
+
+@media only screen and (max-width: 650px) {
+
+    footer .right {
+        display: none;
+    }
+
+    footer p {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        border: none;
+    }
 }
