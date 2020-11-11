@@ -46,6 +46,7 @@ main, footer {
     text-align: center;
     font-size: 1.25rem;
     width: 80%;
+    box-shadow: 5px 5px 20px darkslategrey;
     transition: all 0.5s ease-in 0.1s;
 }
 
@@ -220,10 +221,6 @@ header .mobile {
 }
 
 @media only screen and (max-width: 650px) {
-    
-    #banner {
-        flex-flow: column;
-    }
 
     #banner-image {
         width: 100%;
@@ -383,6 +380,17 @@ header .mobile {
     font-size: 1.25rem;
 }
 
+@media only screen and (max-width: 900px) {
+
+    #course-info .courses {
+        min-width: 36%;
+    }
+
+    #course-info .courses:hover {
+        min-width: 40%;
+    }
+}
+
 @media only screen and (max-width: 650px) {
 
     #course-info p {
@@ -398,7 +406,7 @@ header .mobile {
         background-color: lightgray;
         opacity: 0.9;
         margin: 0.5rem 1.5rem;
-        max-width: 90%;
+        max-width: 80%;
     }
 
     #course-info .courses:hover {
