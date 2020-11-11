@@ -324,24 +324,16 @@ header .mobile {
 /* Course Information */
 
 #course-info {
-    display: grid;
-    grid-template-rows: 1fr 7fr;
-    grid-template-areas:
-        'course-info-header'
-        'course-info-flexbox';
-    align-items: start;
     background-color: whitesmoke;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
 }
 
 #course-info h2 {
-    grid-area: course-info-header;
     text-align: center;
     margin: 2rem 0;
 }
 
 #course-info .course-container {
-    grid-area: course-info-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -380,10 +372,6 @@ header .mobile {
 }
 
 @media only screen and (max-width: 650px) {
-
-    #course-info {
-        grid-template-rows: 1fr 6fr;
-    }
 
     #course-info p {
         display: none;
