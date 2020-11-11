@@ -30,6 +30,7 @@ main, footer {
 
 .image-container {
     overflow: hidden;
+    box-shadow: 5px 5px 20px darkslategrey;
 }
 
 .image-container img {
@@ -45,12 +46,21 @@ main, footer {
     text-align: center;
     font-size: 1.25rem;
     width: 80%;
+    transition: all 0.5s ease-in 0.1s;
+}
+
+.button:hover {
+    background-color: darkslategray;
+    color: white;
+    padding: 1.25rem 0.5rem;
+    box-shadow: 5px 5px 20px black
 }
 
 .side-container {
     display: flex;
     align-items: center;
     border: 1px solid lightgray;
+    transition: background-color 0.5s ease-in 0.1s;
 }
 
 .side-container:hover {
@@ -81,6 +91,11 @@ a {
     color: #505050;
 }
 
+a:hover {
+    color: rgb(122, 172, 189);
+    font-size: 110%;
+}
+
 /* Header */
 
 header {
@@ -92,6 +107,7 @@ header {
     font-size: 1.25rem;
     line-height: 4.5rem;
     overflow: hidden;
+    opacity: 0.8;
 }
 
 header .left {
@@ -107,6 +123,10 @@ header .right {
 header li {
     display: inline-block;
     margin-left: 1rem;
+}
+
+header .left a:hover {
+    color: #505050;
 }
 
 header span {
@@ -331,10 +351,13 @@ header .mobile {
     max-width: 24%;
     margin: 1rem;
     background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.5s ease-in 0.1s;
 }
 
 #course-info .courses:hover {
     background-color: lightgray;
+    max-width: 28%;
 }
 
 #course-info .content {
@@ -362,18 +385,23 @@ header .mobile {
         grid-template-rows: 1fr 6fr;
     }
 
-    #course-info img, #course-info p {
+    #course-info p {
         display: none;
     }
 
     #course-info .course-container {
         flex-flow: column;
+        align-items: center;
     }
 
     #course-info .courses {
-        background-color:lightgray;
+        background-color: lightgray;
         opacity: 0.9;
         margin: 0.5rem 1.5rem;
+        max-width: 90%;
+    }
+
+    #course-info .courses:hover {
         max-width: 100%;
     }
 
