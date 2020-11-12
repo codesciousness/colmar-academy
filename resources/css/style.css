@@ -133,7 +133,7 @@ header span {
 }
 
 .desktop img {
-    height: 55px;
+    height: 4rem;
     width: auto;
     vertical-align: middle;
 }
@@ -160,7 +160,7 @@ header .mobile {
     }
 
     header .mobile img {
-        height: 35px;
+        height: 3.5rem;
         width: auto;
         vertical-align: middle;
     }
@@ -203,7 +203,7 @@ header .mobile {
 @media only screen and (max-width: 1000px) {
 
     #banner-image {
-        min-width: 95%;
+        min-width: 90%;
     }
 
     #banner {
